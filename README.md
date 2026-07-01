@@ -10,7 +10,7 @@ This repository hosts the **public release binaries**. Download the latest insta
 
 ## Download
 
-**[⬇ Download the latest version](https://github.com/engbman/ksp-mission-control-releases/releases/latest)**
+**[⬇ Download the latest installer](https://github.com/engbman/ksp-mission-control-download/releases/latest/download/KSP-Mission-Control-Setup.exe)**
 
 See Installation below for setup steps.
 
