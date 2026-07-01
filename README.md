@@ -8,6 +8,14 @@ This repository hosts the **public release binaries**. Download the latest insta
 
 ---
 
+## Download
+
+**[⬇ Download the latest version](https://github.com/engbman/ksp-mission-control-releases/releases/latest)**
+
+See Installation below for setup steps.
+
+---
+
 ## What is this?
 
 KSP Mission Control adds a real CAPCOM experience to your KSP missions. You speak mission reports into your microphone — "Houston, we have liftoff" — and an AI flight controller responds with authentic NASA-style callouts, burn advisories, and mission status updates.
