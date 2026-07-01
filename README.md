@@ -10,7 +10,7 @@ This repository hosts the **public release binaries**. Download the latest insta
 
 ## Download
 
-**[⬇ Download the latest version (installer + mod, all-in-one)](https://github.com/engbman/ksp-mission-control-download/releases/latest/download/KSP-Mission-Control-Complete.zip)**
+**[⬇ Download the latest version (installer + mod, all-in-one)](https://github.com/engbman/ksp-mission-control-download/releases/latest/download/KSP-Mission-Control.zip)**
 
 Prefer to install manually or use the auto-updater directly? See the individual installer and mod files on the [Releases page](https://github.com/engbman/ksp-mission-control-download/releases/latest).
 
