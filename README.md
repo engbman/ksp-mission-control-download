@@ -49,14 +49,19 @@ Built on OpenAI's TTS and Whisper APIs. Costs less than $0.20 per mission.
 
 ## Installation
 
-1. Download the latest **KSP Mission Control Setup** `.exe` from the Releases section on this page
-2. Run the installer
-3. Download the latest **MissionControlMod** `.zip` from the Releases section on this page. Inside the zip is a `GameData` folder. Extract it into your **KSP root directory**: the folder that already contains KSP's own `GameData` (typically `C:\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program`). When Windows asks whether to merge folders, choose **merge**. Afterward, the mod's `GameData\MissionControlMod` folder will sit inside KSP's existing `GameData` folder, alongside any other mods.
-4. Start KSP and load the kRPC mod
-5. Launch KSP Mission Control from your desktop
-6. Enter your OpenAI API key on first launch
-7. Configure your mission and click GO TO LIVE MISSION
-8. Press F6 in KSP to talk to Houston
+1. Download the app + mod using the link in the Download section above (one zip with both)
+2. Extract the zip
+3. Run the installer `.exe` inside to install the app
+4. Copy the extracted `GameData` folder into your KSP root directory: the folder that already contains KSP's own `GameData` (typically `C:\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program`). When Windows asks whether to merge folders, choose merge.
+5. Start KSP and load the kRPC mod
+6. Launch KSP Mission Control from your desktop
+7. Enter your OpenAI API key on first launch
+8. Configure your mission and click GO TO LIVE MISSION
+9. Press F6 in KSP to talk to Houston
+
+---
+
+**Prefer separate downloads?** Get the installer and mod individually from the [Releases page](https://github.com/engbman/ksp-mission-control-download/releases/latest) instead of the all-in-one zip. Same steps 3-9 apply, just extract the mod zip separately in step 4.
 
 ---
 
