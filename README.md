@@ -4,8 +4,6 @@ A voice-controlled AI mission control system for Kerbal Space Program.
 
 Speak to Houston. Houston talks back.
 
-This repository hosts the **public release binaries**. Download the latest installer and mod from the **Releases** section on the right. The application source code is maintained in a private repository.
-
 ---
 
 ## Download
