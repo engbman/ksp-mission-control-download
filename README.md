@@ -65,6 +65,14 @@ Built on OpenAI's TTS and Whisper APIs. Costs less than $0.20 per mission.
 
 ---
 
+## Updates
+
+The **app** updates itself automatically. When a new version is ready, you'll see a "Relaunch to Update" button in the app.
+
+The **mod** currently does not auto-update. To get a new mod version, download the latest `MissionControlMod` file from the Releases page and replace your `GameData/MissionControlMod` folder. CKAN support for automatic mod updates is planned for a future release.
+
+---
+
 ## kRPC Setup
 
 1. Download kRPC from the KSP forum or CKAN
