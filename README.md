@@ -79,7 +79,7 @@ The **mod** currently does not auto-update. To get a new mod version, download t
 2. Install it in your KSP GameData folder
 3. In KSP, open the kRPC window, click Add Server, then click Start Server
 4. Launch Mission Control and click Establish Connection
-5. When you first connect, KSP will show a popup in the bottom-right corner asking to allow the connection, then click Allow. This only appears once.
+5. When you first connect, KSP will show a popup in the bottom-right corner asking to allow the connection. Click Allow. This only appears once.
 
 ---
 
