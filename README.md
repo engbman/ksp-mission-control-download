@@ -12,7 +12,7 @@ This repository hosts the **public release binaries**. Download the latest insta
 
 KSP Mission Control has two parts: a desktop app and a small KSP mod that connects them.
 
-**[⬇ Download](https://github.com/engbman/ksp-mission-control-download/releases/latest/download/KSP-Mission-Control.zip)** — includes both, one zip, one install.
+**[⬇ Download](https://github.com/engbman/ksp-mission-control-download/releases/latest/download/KSP-Mission-Control.zip)** — one zip with both the app and the mod inside.
 
 Prefer the pieces separately? See the [Releases page](https://github.com/engbman/ksp-mission-control-download/releases/latest).
 
