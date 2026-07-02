@@ -14,6 +14,8 @@ KSP Mission Control has two parts: a desktop app and a small KSP mod that connec
 
 **[⬇ Download](https://github.com/engbman/ksp-mission-control-download/releases/latest/download/KSP-Mission-Control.zip)** — one zip with both the app and the mod inside.
 
+Quick version: run the `.exe` to install the app, then copy the `GameData` folder into your KSP install folder. Full steps in Installation below.
+
 Prefer the pieces separately? See the [Releases page](https://github.com/engbman/ksp-mission-control-download/releases/latest).
 
 ---
