@@ -1,6 +1,6 @@
 # KSP Mission Control
 
-A voice-controlled AI mission control system for Kerbal Space Program.
+A voice-controlled mission control system for Kerbal Space Program.
 
 Speak to Houston. Houston talks back.
 
@@ -20,7 +20,7 @@ Prefer the pieces separately? See the [Releases page](https://github.com/engbman
 
 ## What is this?
 
-KSP Mission Control adds a real CAPCOM experience to your KSP missions. You speak mission reports into your microphone — "Houston, we have liftoff" — and an AI flight controller responds with authentic NASA-style callouts, burn advisories, and mission status updates.
+KSP Mission Control adds a real CAPCOM experience to your KSP missions. You speak mission reports into your microphone — "Houston, we have liftoff" — and CAPCOM responds with authentic NASA-style callouts, burn advisories, and mission status updates.
 
 Built on OpenAI's TTS and Whisper APIs. Costs less than $0.20 per mission.
 
