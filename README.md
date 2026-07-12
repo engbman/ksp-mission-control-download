@@ -215,6 +215,26 @@ If you enjoy KSP Mission Control, consider buying me a coffee:
 
 ---
 
+## Privacy
+
+KSP Mission Control runs on your own machine and doesn't collect your data. There's no analytics, no tracking, and nothing is sent to the developer.
+
+**What's sent to OpenAI:** The app uses OpenAI's API (with your own API key) to work:
+- Your microphone audio is sent to OpenAI to transcribe your spoken reports into text.
+- The app's CAPCOM dialogue is sent to OpenAI to generate the spoken voice.
+
+Your voice and this text are processed by OpenAI under their API data policy (per OpenAI, API data isn't used to train their models by default). Audio is processed on the fly and the temporary files are deleted after use — no recordings or transcripts are kept.
+
+**Your API key** is stored encrypted on your own machine (using your operating system's secure storage) and is only ever sent to OpenAI.
+
+**Other network activity:**
+- On first launch, the app downloads a small audio component (ffmpeg) from a public GitHub repository.
+- The app periodically checks GitHub for updates (this is how auto-update works).
+
+**Stored on your machine:** only your encrypted API key, the pilot/CAPCOM names you enter, and a few app settings. Nothing is stored remotely or shared with anyone.
+
+---
+
 ## License
 
 All rights reserved. © 2026 Bman
