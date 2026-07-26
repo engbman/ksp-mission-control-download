@@ -1,8 +1,10 @@
 # KSP Mission Control
 
-A voice-controlled mission control system for Kerbal Space Program.
+Fly Kerbal Space Program by voice. You speak your radio calls to CAPCOM; CAPCOM speaks back, and checks every call against your live telemetry before it clears you to the next step.
 
-Speak to Houston. Houston talks back.
+**Now with a full Apollo 11 recreation:** fly the first Moon landing from launch to the lunar surface, with CAPCOM speaking the real 1969 wording from the Apollo 11 Flight Journal.
+
+Speak to Houston. Houston talks back, and Houston is watching the numbers.
 
 ---
 
@@ -10,7 +12,7 @@ Speak to Houston. Houston talks back.
 
 KSP Mission Control has two parts: a desktop app and a small KSP mod that connects them.
 
-**[⬇ Download](https://github.com/engbman/ksp-mission-control-download/releases/latest/download/KSP-Mission-Control.zip)** — one zip with both the app and the mod inside.
+**[⬇ Download](https://github.com/engbman/ksp-mission-control-download/releases/latest/download/KSP-Mission-Control.zip)**: one zip with both the app and the mod inside.
 
 Quick guide: run the `.exe` to install the app, then copy the `GameData` folder into your KSP install folder. Full steps in Installation below.
 
@@ -20,30 +22,47 @@ Prefer the pieces separately? See the [Releases page](https://github.com/engbman
 
 ## What is this?
 
-KSP Mission Control adds a real CAPCOM experience to your KSP missions. You speak mission reports into your microphone — "Houston, we have liftoff" — and CAPCOM responds with authentic NASA-style callouts, burn advisories, and mission status updates.
+KSP Mission Control turns your KSP flights into a voice mission. You speak your reports into the microphone, "Houston, we have liftoff", and CAPCOM answers with GO calls, burn advisories, and status updates, then verifies each call against your live telemetry before clearing you onward. A report only counts when the vehicle actually did the thing.
 
-Built on OpenAI's TTS and Whisper APIs. Costs less than $0.20 per mission.
+It now includes a full Apollo 11 recreation (see Mission Recreations below).
+
+Built on OpenAI's TTS and Whisper APIs. A typical mission costs less than $0.20.
 
 ---
 
 ## Features
 
-- **Voice-controlled:** speak your reports, hear real CAPCOM responses
-- **Full mission flow:** Prelaunch → Ascent → Parking Orbit → Transfer → Coast → Insertion → Descent → Landing → Surface Ops → Return → Reentry
-- **Live telemetry:** connects to KSP via kRPC for real orbital data
-- **Burn advisories & go-calls:** CAPCOM reads delta-V, burn duration, and T-minus ignition time, and clears you with a go-call (TLI, LOI, ignition, return burn) before every burn
-- **Orbit confirmation:** CAPCOM tells you whether your orbit is stable and nominal, or elliptical but within limits
-- **Mission phases:** tracks every checklist item automatically, guiding you to the next call
-- Mission control dashboard for tracking your flight in real time
+- **Voice CAPCOM:** speak your reports, hear CAPCOM respond in real time
+- **Telemetry-verified calls:** CAPCOM checks each report against live KSP telemetry (via kRPC) before advancing, so a call only counts when the vehicle actually did it
+- **Crew altitude ladder:** on the way down, your crew calls the altitude and descent rate to you in their own voice
+- **Live mission screen:** telemetry readout, last transmission with replay, burn advisory recap, mission-clock timestamps on every log line, and a master volume slider
+- **Mission setup:** pick a preset and see its mission profile at a glance before you fly
+- **Full mission flow:** Prelaunch through Ascent, Parking Orbit, Transfer, Coast, Insertion, Descent, Landing, Surface Ops, Return, and Reentry
+- **Burn advisories and GO calls:** CAPCOM reads delta-V, burn duration, and T-minus ignition time, and clears you with a GO call before every burn
+- **Push-to-talk:** hold F6 to talk to Houston, even while KSP is focused, plus a true-fullscreen (F11) mode
+- **In-app help:** reopen the guide any time from the setup screen
+- **Optional ElevenLabs voice:** add an ElevenLabs key for a more natural CAPCOM
+
+---
+
+## Mission Recreations
+
+### Apollo 11
+
+Fly the first Moon landing from launch to Tranquility Base, with CAPCOM speaking the real 1969 wording from the Apollo 11 Flight Journal. This flight expects the mandatory stage callouts the crew made, S-1C staging, S-2 ignition, and S-4B cutoff, and holds you to them.
+
+Requires the Sarnus V-A11 craft by gc1ceo, from [KerbalX](https://kerbalx.com/gc1ceo/Sarnus-V-A11).
 
 ---
 
 ## Requirements
 
-- Kerbal Space Program 1.x
-- kRPC mod installed in KSP
-- OpenAI API key: required for CAPCOM voice and speech recognition. Get one at platform.openai.com/api-keys.
-- Windows 10/11
+- Windows 10 or 11
+- Kerbal Space Program 1.12.x
+- The kRPC mod, installed in KSP (see kRPC Setup below)
+- The MissionControlMod, which is bundled in the download and installs into `GameData`
+- An OpenAI API key for CAPCOM voice and speech recognition, typically under $0.20 per mission. Get one at platform.openai.com/api-keys
+- Optional: an ElevenLabs API key for a more natural CAPCOM voice
 
 ---
 
@@ -83,11 +102,11 @@ The **mod** currently does not auto-update. To get a new mod version, download t
 
 ---
 
-## Voice Commands — Full Reference
+## Voice Commands: Full Reference
 
 The app shows the exact phrase to say at each step in the SPEAK hint on screen. This is the full reference list.
 
-Items marked 🛰️ **(auto)** are confirmed automatically by telemetry — the pilot does not need to speak these.
+Items marked 🛰️ **(auto)** are confirmed automatically by telemetry. The pilot does not need to speak these.
 
 ### Common phases (all surface-launch missions)
 
@@ -122,9 +141,9 @@ Phases: Prelaunch → Ascent → Parking Orbit → Transfer Burn → Coast → I
 
 ### Flyby
 Phases: Prelaunch → Ascent → Parking Orbit → Transfer Burn → Coast
-(Same as Orbit but with no insertion — no insertion node, no Insertion Burn.)
+(Same as Orbit but with no insertion, no insertion node, no Insertion Burn.)
 
-### Land on Body — airless (Mun, Minmus, etc.)
+### Land on Body: airless (Mun, Minmus, etc.)
 Phases: Prelaunch → Ascent → Parking Orbit → Transfer Burn → Coast → Insertion Burn → Descent → Landing
 (Parking Orbit, Transfer Burn, Coast, and Insertion Burn use the same phrases as in Orbit.)
 
@@ -139,7 +158,7 @@ Phases: Prelaunch → Ascent → Parking Orbit → Transfer Burn → Coast → I
 - **Touchdown:** "touchdown", "we have touchdown", "vehicle is down", "we are down"
 - **Surface stable:** "surface stable", "vehicle stable", "we are stable", "lander stable"
 
-### Land on Body — atmospheric (Duna, Eve, Laythe)
+### Land on Body: atmospheric (Duna, Eve, Laythe)
 Phases: Prelaunch → Ascent → Parking Orbit → Transfer Burn → Coast → Insertion Burn → Atmospheric Reentry → **Landing**
 (One-way atmospheric landings end in a **Landing** phase, and CAPCOM welcomes you to the destination. The **Recovery** phase name is used only by the Land & Return preset, for the Kerbin splashdown.)
 
@@ -155,7 +174,8 @@ Phases: Prelaunch → Ascent → Parking Orbit → Transfer Burn → Coast → I
 - **Touchdown or splashdown:** "touchdown", "we have touchdown", "splashdown", "we have splashdown", "vehicle is down", "we are down"
 - **Vehicle stable:** "vehicle stable", "surface stable", "capsule stable", "we are stable"
 
-### Land & Return (Apollo-style)
+### Land & Return
+A full launch, transfer, land, and return mission.
 Phases: …Landing (as airless) → Surface Operations → Surface Ascent → Return Orbit → Return Burn → Return Coast → Atmospheric Reentry → Recovery
 (Outbound and landing phases as in Land on Body. On the final Kerbin splashdown, CAPCOM welcomes you home.)
 
@@ -191,14 +211,14 @@ Phases: Prelaunch → Ascent → Parking Orbit → Rendezvous → Docking
 - **Final approach:** "final approach", "on final approach", "approach established", "closing in", "final approach confirmed"
 - **Contact and capture:** "contact and capture", "capture confirmed", "soft capture", "hard capture", "docking complete", "docked", "we are docked"
 
-You do not need to say phrases word for word — the system matches common variations. Watch the SPEAK hint in the app for the recommended phrase at each step.
+You do not need to say phrases word for word. The system matches common variations. Watch the SPEAK hint in the app for the recommended phrase at each step.
 
 ---
 
 ## Cost
 
-A typical Mun mission uses approximately $0.10–0.20 of OpenAI API credits.
-A $5 credit lasts 25–50 full missions.
+A typical Mun mission uses approximately $0.10-0.20 of OpenAI API credits.
+A $5 credit lasts 25-50 full missions.
 
 ---
 
@@ -215,23 +235,14 @@ If you enjoy KSP Mission Control, consider buying me a coffee:
 
 ---
 
-## Privacy
+## Credits
 
-KSP Mission Control runs on your own machine and doesn't collect your data. There's no analytics, no tracking, and nothing is sent to the developer.
+- Apollo 11 mission audio: original NASA recordings, public domain
+- Apollo 11 mission insignia: NASA, public domain
+- Mission profile artwork: AI-generated for this app
+- Sarnus V-A11 craft: by gc1ceo on [KerbalX](https://kerbalx.com/gc1ceo/Sarnus-V-A11)
 
-**What's sent to OpenAI:** The app uses OpenAI's API (with your own API key) to work:
-- Your microphone audio is sent to OpenAI to transcribe your spoken reports into text.
-- The app's CAPCOM dialogue is sent to OpenAI to generate the spoken voice.
-
-Your voice and this text are processed by OpenAI under their API data policy (per OpenAI, API data isn't used to train their models by default). Audio is processed on the fly and the temporary files are deleted after use — no recordings or transcripts are kept.
-
-**Your API key** is stored encrypted on your own machine (using your operating system's secure storage) and is only ever sent to OpenAI.
-
-**Other network activity:**
-- On first launch, the app downloads a small audio component (ffmpeg) from a public GitHub repository.
-- The app periodically checks GitHub for updates (this is how auto-update works).
-
-**Stored on your machine:** only your encrypted API key, the pilot/CAPCOM names you enter, and a few app settings. Nothing is stored remotely or shared with anyone.
+This is an independent fan project, not affiliated with or endorsed by NASA.
 
 ---
 
@@ -244,4 +255,4 @@ Redistribution, modification, or commercial use is not permitted without written
 
 ---
 
-*Built by Bman — because KSP deserved a real mission control.*
+*Built by Bman, because KSP deserved a real mission control.*
